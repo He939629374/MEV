@@ -1,5 +1,5 @@
 <template>
-<div id="particlesId"> 
+<div id="particlesId" @click="togo"> 
   <particlesJS ></particlesJS> 
 </div>
 
@@ -23,6 +23,9 @@ import particlesJS from '../components/particles/Particles.vue'
       particlesJS
     },
     methods: {
+      togo(){
+        this.$router.replace("/index")
+      },
       canplay() {
         this.vedioCanPlay = true
       },
